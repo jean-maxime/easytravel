@@ -1,0 +1,48 @@
+<template name="add-travel">
+  <h1>Add a Travel </h1>
+  <br>
+  <br>
+  {{> loginButtons}}
+  <br>
+<br>
+  <form class="add-travel">
+    <label for="departure_city">Departure City</label>
+      <input type="text" id="departure_city" placeholder="city" required>
+      <br>
+      <br>
+    <label for="departure_place">Departure Place</label>
+      <input type="text" id="departure_place" name="departure_place" placeholder="place" required>
+    <br>
+    <br>
+    <label for="arrival_city">Arrival City</label>
+      <input type="text" id="arrival_city" name="arrival_city" placeholder="city" required>
+      <br>
+      <br>
+    <label for="arrival_place">Arrival Place</label>
+      <input type="text" id="arrival_place" name="arrival_place" placeholder="place" required>
+    <br>
+    <br>
+    <label for="departure_date">Departure date</label>
+      <input type="date" id="departure_date" name="departure_date" required>
+    <br>
+    <br>
+    <label for="departure_time">Departure time</label>
+      <input type="time" id="departure_time" name="departure_time" required>
+    <br>
+    <br>
+    <label for="price">Price</label>
+      <input type="number" id="price" name="price" step="0" min="0" max="99" required />
+    <br>
+    <br>
+    <label for="places">Places</label>
+      <input type="number" id="places" name="places" step="0" min="0" max="10" required />
+    <br>
+    <br>
+    <label for="car_model">Your car model</label>
+      <input type="text" id="car_model" name="car_model" required>
+    <br>
+    <br>
+    <input type="submit" value="send">
+  </form>
+
+</template>
