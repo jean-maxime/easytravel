@@ -6,7 +6,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template["add-travel"].helpers({
+  Template.add.helpers({
     user: function(){
       return Meteor.user()
     }

@@ -11,7 +11,7 @@
 
   });
 
-  Router.route('/add-travel', function(){
-    this.render('add-travel');
+  Router.route('/add', function(){
+    this.render('add');
 
   });

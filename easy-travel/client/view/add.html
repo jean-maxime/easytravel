@@ -1,11 +1,13 @@
-<template name="add-travel">
+<template name="add">
   <h1>Add a Travel </h1>
   <br>
   <br>
   {{> loginButtons}}
   <br>
 <br>
-  <form class="add-travel">
+
+  <div id="add-travel">
+
     <label for="departure_city">Departure City</label>
       <input type="text" id="departure_city" placeholder="city" required>
       <br>
@@ -42,7 +44,7 @@
       <input type="text" id="car_model" name="car_model" required>
     <br>
     <br>
-    <input type="submit" value="send">
-  </form>
+    <button  id="b1">send</button>
+  </div>
 
 </template>
