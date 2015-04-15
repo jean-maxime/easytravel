@@ -1,20 +1,15 @@
 if (Meteor.isClient) {
 
-  Router.onBeforeAction(function () {
-    if (!Meteor.userId()) {
-      this.render('login');
-    } else {
-      this.next();
+  Template.home.helpers({
+    user: function(){
+      return Meteor.user()
     }
   });
 
-  Router.route('/', function(){
-    this.render('home');
-
-    Template.home.helpers({
-      user: Meteor.user()
-    });
-
+  Template["add-travel"].helpers({
+    user: function(){
+      return Meteor.user()
+    }
   });
 
 }
