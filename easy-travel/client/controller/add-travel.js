@@ -1,8 +1,5 @@
 // Inside the if (Meteor.isClient) block, right after Template.body.helpers:
 
-AddTravel = new Mongo.Collection("add_travel");
-
-
 Template.add.events({
   "click #b1": function (event) {
 
@@ -19,7 +16,10 @@ Template.add.events({
     var places = document.getElementById( "places" ).value;
     var car_model = document.getElementById( "car_model" ).value;
 
-    AddTravel.insert({
+    console.log(AddTravel);
+    // console.log(new Mongo.Collection("add_travel").find().fetch());
+
+    var newTravel = {
 
       createdBy: Meteor.userId(),
       createdAt: new Date(), // current time
@@ -33,7 +33,9 @@ Template.add.events({
       place: places,
       car_model: car_model
 
-    });
+    }
+    console.log(newTravel);
+      AddTravel.insert(newTravel);
 
     // Clear form
     departure_city.value = "";

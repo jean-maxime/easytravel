@@ -1,1 +1,185 @@
 /* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,300italic);
+
+body{
+  background-color:#EEEEEE;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+  font-size:16px;
+  font-weight:300;
+  margin-top:60px
+}
+
+*{
+  box-sizing:border-box;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+
+/* Header template */
+
+nav{
+  background-color:#42535F;
+  width:100%;
+  padding:4%;
+  height:60px;
+  position:fixed;
+  z-index:10;
+  top:0;
+
+}
+
+nav ul,
+nav ul li ul{
+  margin:0;
+  padding:0
+}
+
+nav ul li{
+  display:inline-block
+}
+
+nav ul li ul.subnav{
+  position: absolute;
+  left: -100%;
+  top: 15%;
+  display: block;
+  background-color: red;
+}
+
+nav ul li ul.subnav li{
+  display:block;
+  padding:4%
+}
+
+
+nav ul li ul.subnav a{
+  display:block;
+  text-align:left;
+}
+/* Home template */
+
+.travel:nth-of-type(1){
+  margin-top:2%;
+}
+
+.travel{
+  background-color:#fff;
+  color:#42535F;
+  max-width:96%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-bottom:2%;
+  padding:2%;
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  -o-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  position:relative;
+  width: 100vw;
+  height: 56.25vw;
+}
+
+.link_single{
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  z-index:2;
+
+}
+
+.departure_date, .departure_time,.date img{
+  display:inline-block;
+  vertical-align:middle;
+}
+
+.date img{
+  width:6%;
+}
+
+.destinations{
+  position:relative;
+  margin-top: 12%;
+}
+
+.destination_places,
+.dots{
+  display:inline-block;
+  vertical-align:middle;
+}
+
+.destination_places{
+  padding-left:2%;
+}
+
+.dots{
+  width:5%;
+  height:auto;
+  padding-left:2%;
+}
+
+.departure_city, .departure_place,
+.arrival_city, .arrival_place{
+  display:inline-block;
+}
+
+.departure_city,
+.arrival_city{
+  font-size:1.5rem
+}
+
+.departures{
+  position:absolute;
+  top:-10%;
+}
+
+.arrivals{
+  position:absolute;
+  bottom:-10%;
+}
+
+.price{
+  position: absolute;
+  color:#ffffff;
+  background-color:#42535F;
+  padding:1% 2%;
+  left:0;
+  bottom:4%;
+  font-size:1.75rem;
+}
+
+.car{
+  margin:0 auto;
+  position: absolute;
+  bottom:2%;
+  left:0;
+  right:0;
+  text-align:center;
+}
+
+.car img, .car_model{
+  display:inline-block;
+  vertical-align:middle;
+}
+
+.car_model img{
+  width:48px;
+  height:42px;
+
+}
+
+.places{
+  position:absolute;
+  bottom:2%;
+  right:2%;
+}
+
+.places img{
+  width:66px;
+  height:42px;
+}

@@ -15,3 +15,8 @@
     this.render('add');
 
   });
+
+  Router.route('/single', function(){
+    this.render('single');
+
+  });
