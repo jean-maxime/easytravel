@@ -4,6 +4,8 @@
   {{> loginButtons}}
   <br> -->
 
+
+
   {{#each travels}}
     <div class="travel">
     <a class="link_single" href="{{ pathFor 'single' }}"></a>
@@ -27,7 +29,7 @@
         </div>
       </div>
       <div class="price">{{ price }} €</div>
-      <div class="places">{{ places }}<img src="/images/places.svg"></div>
+      <div class="places">{{ place }}<img src="/images/places.svg"></div>
       <div class="car">
         <img src="/images/car.svg" >
         <div class="car_model">{{car_model}}</div>

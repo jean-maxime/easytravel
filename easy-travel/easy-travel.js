@@ -7,7 +7,9 @@ if (Meteor.isClient) {
     },
 
     travels: function(){
-      return AddTravel.find();
+      currentDate = new Date();
+      endDate = new Date('1/1/2018');
+      return AddTravel.find({}, {sort: {departure_date: 1}});
     }
 
   });

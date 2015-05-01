@@ -1,15 +1,19 @@
 <template name="add">
   <h1>Add a Travel </h1>
-  <br>
-  <br>
+  <br />
+  <br />
   {{> loginButtons}}
-  <br>
-<br>
+  <br />
+  <br />
 
-  <div id="add-travel">
+  <!-- {{#if insert == 'ok'}}
+    <p>Bravo, c'est rentré</p>
+  {{/if}} -->
+
+  <form id="add-travel">
 
     <label for="departure_city">Departure City</label>
-      <input type="text" id="departure_city" placeholder="city" required>
+      <input type="text" id="departure_city" name="departure_city" placeholder="city" required>
       <br>
       <br>
     <label for="departure_place">Departure Place</label>
@@ -44,7 +48,7 @@
       <input type="text" id="car_model" name="car_model" required>
     <br>
     <br>
-    <button  id="b1">send</button>
-  </div>
+    <input type="submit"  id="b1" value="send" />
+  </form>
 
 </template>
