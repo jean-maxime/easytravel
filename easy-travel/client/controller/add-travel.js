@@ -2,7 +2,6 @@
 
 Template.add.events({
   "submit form": function (event) {
-    console.log('<div class="success">Your travel has been saved</div>');
 
     // This function is called when the new task form is submitted
     // console.log('tets');
@@ -16,9 +15,7 @@ Template.add.events({
     var price = event.target.price.value;
     var places = event.target.places.value;
     var car_model = event.target.car_model.value;
-    console.log(places);
 
-    console.log(AddTravel);
     // console.log(new Mongo.Collection("add_travel").find().fetch());
 
     var newTravel = {
@@ -36,11 +33,11 @@ Template.add.events({
       car_model: car_model
 
     }
-    console.log(newTravel);
-      AddTravel.insert(newTravel);
+
+    AddTravel.insert(newTravel);
 
     // Clear form
-    departure_city.value = "";
+    departure_city = "";
     departure_place = "";
     arrival_city = "";
     arrival_place = "";

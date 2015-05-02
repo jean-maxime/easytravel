@@ -8,7 +8,7 @@
 
   {{#each travels}}
     <div class="travel">
-    <a class="link_single" href="{{ pathFor 'single' }}"></a>
+    <a class="link_single" href="{{ pathFor 'singleId' _id=this._id}}"></a>
     <div class="date">
       <img src="/images/date.svg">
       <div class="departure_date">{{ departure_date }}</div>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="price">{{ price }} €</div>
-      <div class="places">{{ place }}<img src="/images/places.svg"></div>
+      <div class="places"><div class="place">{{ place }} place(s)</div><img src="/images/places.svg"></div>
       <div class="car">
         <img src="/images/car.svg" >
         <div class="car_model">{{car_model}}</div>

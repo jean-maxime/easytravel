@@ -183,3 +183,12 @@ nav ul li ul.subnav a{
   width:66px;
   height:42px;
 }
+
+.place{
+  float: left;
+  margin-top: 13px;
+}
+
+.form-place{
+  margin: 2%;
+}
