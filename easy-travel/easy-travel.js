@@ -1,3 +1,10 @@
+Router.route('singleId', {
+    path: '/single/:_id',
+    data: function(){
+        return AddTravel.findOne({_id: this.params._id});
+    }
+});
+
 if (Meteor.isClient) {
 
   Template.home.helpers({
@@ -7,7 +14,7 @@ if (Meteor.isClient) {
     },
 
     travels: function(){
-      return AddTravel.find();
+      return AddTravel.find({}, {sort: {departure_date: 1}});
     }
 
   });
@@ -17,6 +24,14 @@ if (Meteor.isClient) {
       return Meteor.user()
     }
   });
+
+  Template.singleId.helpers({
+    user: function(){
+      return Meteor.user()
+    }
+  });
+
+  
 
 }
 

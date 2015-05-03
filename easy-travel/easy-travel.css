@@ -24,12 +24,12 @@ a{
 nav{
   background-color:#42535F;
   width:100%;
-  padding:4%;
+  padding:20px;
   height:60px;
   position:fixed;
   z-index:10;
   top:0;
-
+  margin-bottom: 10px;
 }
 
 nav ul,
@@ -80,7 +80,7 @@ nav ul li ul.subnav a{
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
   position:relative;
   width: 100vw;
-  height: 56.25vw;
+  height: 40vw;
 }
 
 .link_single{
@@ -104,7 +104,7 @@ nav ul li ul.subnav a{
 
 .destinations{
   position:relative;
-  margin-top: 12%;
+  margin-top: 6%;
 }
 
 .destination_places,
@@ -135,12 +135,12 @@ nav ul li ul.subnav a{
 
 .departures{
   position:absolute;
-  top:-10%;
+  top:0;
 }
 
 .arrivals{
   position:absolute;
-  bottom:-10%;
+  bottom:4%;
 }
 
 .price{
@@ -182,4 +182,13 @@ nav ul li ul.subnav a{
 .places img{
   width:66px;
   height:42px;
+}
+
+.place{
+  float: left;
+  margin-top: 13px;
+}
+
+.form-place{
+  margin: 2%;
 }

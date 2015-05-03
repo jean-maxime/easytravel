@@ -1,22 +1,21 @@
 // Inside the if (Meteor.isClient) block, right after Template.body.helpers:
 
 Template.add.events({
-  "click #b1": function (event) {
+  "submit form": function (event) {
 
     // This function is called when the new task form is submitted
     // console.log('tets');
     // var target = document.getElementById( "add-travel" );
-    var departure_city = document.getElementById( "departure_city" ).value;
-    var departure_place = document.getElementById( "departure_place" ).value;
-    var arrival_city = document.getElementById( "arrival_city" ).value;
-    var arrival_place = document.getElementById( "arrival_place" ).value;
-    var departure_date = document.getElementById( "departure_date" ).value;
-    var departure_time = document.getElementById( "departure_time" ).value;
-    var price = document.getElementById( "price" ).value;
-    var places = document.getElementById( "places" ).value;
-    var car_model = document.getElementById( "car_model" ).value;
+    var departure_city = event.target.departure_city.value;
+    var departure_place = event.target.departure_place.value;
+    var arrival_city = event.target.arrival_city.value;
+    var arrival_place = event.target.arrival_place.value;
+    var departure_date = event.target.departure_date.value;
+    var departure_time = event.target.departure_time.value;
+    var price = event.target.price.value;
+    var places = event.target.places.value;
+    var car_model = event.target.car_model.value;
 
-    console.log(AddTravel);
     // console.log(new Mongo.Collection("add_travel").find().fetch());
 
     var newTravel = {
@@ -34,11 +33,11 @@ Template.add.events({
       car_model: car_model
 
     }
-    console.log(newTravel);
-      AddTravel.insert(newTravel);
+
+    AddTravel.insert(newTravel);
 
     // Clear form
-    departure_city.value = "";
+    departure_city = "";
     departure_place = "";
     arrival_city = "";
     arrival_place = "";
@@ -47,6 +46,8 @@ Template.add.events({
     price = "";
     place = "";
     car_model = "";
+
+    Router.go('/')
 
     // Prevent default form submit
     event.preventDefault();
