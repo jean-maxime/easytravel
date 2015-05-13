@@ -63,7 +63,7 @@ nav ul li ul.subnav a{
 /* Home template */
 
 .travel:nth-of-type(1){
-  margin-top:2%;
+  margin-top:16%;
 }
 
 .travel{
@@ -80,7 +80,7 @@ nav ul li ul.subnav a{
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
   position:relative;
   width: 100vw;
-  height: 40vw;
+  height: 50vw;
 }
 
 .link_single{
@@ -135,12 +135,12 @@ nav ul li ul.subnav a{
 
 .departures{
   position:absolute;
-  top:0;
+  top:-25%;
 }
 
 .arrivals{
   position:absolute;
-  bottom:4%;
+  bottom:-25%;
 }
 
 .price{
@@ -191,4 +191,218 @@ nav ul li ul.subnav a{
 
 .form-place{
   margin: 2%;
+}
+
+
+/* Single */
+
+.travel.single{
+  width: 100%;
+  height: auto;
+  background-color:#fff;
+  color:#42535F;
+  max-width:96%;
+  margin-left:2%;
+  margin-right:2%;
+  margin-bottom:2%;
+  padding:2%;
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  -o-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+}
+
+.single .car,
+.single .price,
+.single .places{
+  position: relative;
+}
+
+.single .car{
+  text-align:left;
+  padding-top:8%;
+}
+
+.single .place{
+  float:none;
+}
+
+.single .places{
+  padding-top:4%;
+  padding-left:2%
+}
+
+.single .places,
+.single .place{
+  display:inline-block;
+  vertical-align:top
+}
+
+.single .price{
+    position: relative;
+    padding:1% 2%;
+    font-size:1.75rem;
+    background-color:inherit ;
+    color:#42535F;
+    padding-top:4%;
+}
+
+
+button.book{
+  /*border:1px solid #42535F;*/
+  border:none;
+  margin-top:8%;
+  margin-bottom:8%;
+  margin-left:auto;
+  margin-right:auto;
+  background-color:#42535F;
+  color:#FFFFFF;
+  border-radius:4px;
+  padding:4%;
+  font-size:1rem;
+  font-weight:300 !important;
+  display:block;
+  text-align:center;
+  outline:none;
+  cursor:pointer;
+}
+
+form#place{
+  display:none;
+}
+
+
+/**** LOGIN ****/
+
+.material-input 			  {
+  position:relative;
+  margin-bottom:45px;
+  margin-left: auto;
+  margin-right:auto;
+  display: block;
+  width: 70%;
+}
+
+.material-input input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom:1px solid #fff;
+  background-color: rgba(0,0,0,0);
+  color:#fff !important;
+}
+.material-input input:focus{ outline:none; }
+
+/* LABEL ======================================= */
+.material-input label 				 {
+  color:#fff;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.material-input input:focus ~ label,
+.material-input input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#fff;
+}
+
+/* BOTTOM BARS ================================= */
+.material-input .bar 	{ position:relative; display:block; width:300px; }
+.material-input .bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#fff;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.material-input .bar:before {
+  left:50%;
+}
+.material-input .bar:after {
+  right:50%;
+}
+
+/* active state */
+.material-input input:focus ~ .bar:before,
+.material-input input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.material-input .highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.material-input input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+.login-button{
+  background-color:#fff;
+  border:none;
+  width:250px;
+  height:55px;
+  font-size:1rem;
+  display:block;
+  border-radius:4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  margin-bottom:16%;
+  cursor:pointer;
+}
+
+.create-account{
+  background-color:rgba(0,0,0,0);
+  border:2px solid #fff;
+  color:#fff;
+  width:250px;
+  height:55px;
+  font-size:1rem;
+  display:block;
+  border-radius:4px;
+  margin:0 auto;
+  text-align:center
+}
+
+h1.login-title{
+  text-align:center;
 }

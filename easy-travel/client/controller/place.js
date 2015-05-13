@@ -19,4 +19,20 @@ Template.singleId.events({
     return false;
   }
 
+
 });
+
+Template.singleId.events({
+
+  "click button":function(){
+    $('#place').fadeIn();
+  }
+
+
+});
+
+// Meteor.startup(function() {
+//   $('.book').click(function(){
+//     alert('test')
+//   })
+// });
