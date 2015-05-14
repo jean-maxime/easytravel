@@ -13,6 +13,7 @@ console.log(password);
   Meteor.loginWithPassword(user, password, function(err) {
                           if (err) {
                                   alert(err.reason);
+                                  // var input = getElementBy
                           } else {
                                   Router.go('home');
                           }
@@ -21,5 +22,5 @@ console.log(password);
   event.preventDefault();
   return false;
  }
- 
+
 });
