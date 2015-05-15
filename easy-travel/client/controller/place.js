@@ -10,10 +10,24 @@ Template.singleId.events({
     var places_taken = event.target.places_taken.value;
     var places_free = event.target.places_free.value;
     var places = places_free - places_taken;
+    var user_id = event.target.user_id.value;
 
     AddTravel.update({_id: travel_id}, {$set: {place: places}});
+    
+    // User.createIndex({id: 1}, { unique: true });
+    // If user exist -> update else -> create
+    // User.insert({id: user_id, travel: [{id: travel_id, places: places_taken}]});
+    // User.update({id: user_id}, upsert: true);
 
+    // User.update(
+    //   { id: user_id },
+    //   {$push: {
+    //     travel: {id: travel_id, places: places_taken}
+    //   }}, {upsert: true}
+    // );
 
+    Meteor.call('userUpdate', user_id, travel_id,places_taken);
+  
     // Prevent default form submit
     event.preventDefault();
     return false;
