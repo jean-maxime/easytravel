@@ -1,0 +1,37 @@
+<template name="login">
+
+	<div class="login-background">
+		<h1 class="login-title"><b>Easy</b> Travel</h1>
+
+		<form id="login-form" autocomplete="off">
+
+			<!-- Fake input to desactivate autoffil/autocompete -->
+			<input style="display:none;" type="text" name="somefakename" />
+			<input style="display:none;" type="password" name="anotherfakename" />
+
+			<div class="material-input">
+				<input id="login" type="text" name="login" autocomplete="off" required />
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Login</label>
+			</div>
+
+			<div class="material-input">
+				<input id="password" type="password" name="password" autocomplete="off" required />
+				<span class="highlight"></span>
+				<span class="bar"></span>
+				<label>Password</label>
+			</div>
+
+			<!-- <div class="" -->
+		  <input class="login-button active" type="submit" value="Login">
+			<div id="error-login">Sorry, user not found, retry or create an account </div>
+		</form>
+
+		<button class="create-account">Create an account</button>
+		<div id="error-account">the password must be at least 6 characters long</div>
+
+
+	</div>
+
+</template>
