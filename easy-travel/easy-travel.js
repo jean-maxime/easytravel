@@ -30,9 +30,6 @@ if (Meteor.isClient) {
       return Meteor.user()
     }
   });
-
-
-
 }
 
 if (Meteor.isServer) {
