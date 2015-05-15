@@ -1,6 +1,7 @@
 AddTravel = new Mongo.Collection("add_travel");
 User = new Mongo.Collection("user");
 
+
 Router.route('myTravel', {
     path: '/mytravel/:_id',
     data: function(){
@@ -50,7 +51,7 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    
+
   });
 
   User.allow({
@@ -97,8 +98,5 @@ if (Meteor.isServer) {
       });
     }
 
-  }); 
+  });
 }
-
-
-

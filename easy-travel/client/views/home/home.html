@@ -1,9 +1,7 @@
 <template name="home">
 {{> header}}
   <!-- <p>User id : {{user._id}}</p> -->
-  {{> loginButtons}}
-  <br>
-
+  <!-- {{> loginButtons}} -->
   {{#each travels}}
     <div class="travel">
     <a class="link_single" href="{{ pathFor 'singleId' _id=this._id}}"></a>

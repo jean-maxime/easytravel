@@ -1,4 +1,11 @@
-  Router.onBeforeAction(function () {
+Router.configure({
+  layoutTemplate: 'main',
+  notFoundTemplate: 'notFound'
+
+});
+
+
+Router.onBeforeAction(function () {
     if (!Meteor.userId()) {
       this.render('login');
     } else {
