@@ -1,15 +1,9 @@
 <template name="header">
   <nav>
     <ul>
-     <li><a href="/">Accueil</a>
-        <ul class="subnav">
-          <li><a href="#">subNav1</a></li>
-          <li><a href="#">subNav2</a></li>
-        </ul>
-     </li>
-     <li><a href="#">Search</a></li>
-     <li><a href="#">Filter</a></li>
+     <li><a href="/">Accueil</a></li>
      <li><a href="{{ pathFor 'add' }}">Add a travel</a></li>
+     <li><a href="{{ pathFor 'myTravel' _id=userId}}">My Travels</a></li>
      <li id="profile"><a id="my-profile" href="#">profile</a>
        <ul id="profile-submenu">
           <li>My account</li>
