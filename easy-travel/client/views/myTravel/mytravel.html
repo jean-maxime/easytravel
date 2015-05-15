@@ -1,0 +1,33 @@
+<template name="myTravel">
+{{> header}}
+
+<h1>My Travels</h1>
+
+{{#each travel }}
+<div class="travel single">
+  <div class="date">
+    <img src="/images/date.svg" />
+    <div class="departure_date">{{ departure_date }}</div>
+    <div class="departure_time">{{ departure_time }}</div>
+  </div>
+  <!-- {{ createdAt }}<br> -->
+  <div class="destinations">
+    <img class="dots" src="/images/dots.svg" />
+    <div class="destination_places">
+      <div class="departures">
+        <div class="departure_city">{{ departure_city }},</div>
+        <div class="departure_place">{{ departure_place }}</div>
+      </div>
+      <div class="arrivals">
+        <div class="arrival_city">{{ arrival_city }},</div>
+        <div class="arrival_place">{{ arrival_place }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="places"><img src="/images/places.svg" /><div class="place">You've take {{ places }} place(s)</div></div>
+  <div class="price">{{ price }} € / Place</div>
+</div>
+
+{{/each}}
+
+</template>
