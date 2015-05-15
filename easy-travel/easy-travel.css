@@ -8,6 +8,7 @@ body{
   font-size:16px;
   font-weight:300;
   margin-top:60px;
+  height:100%;
 }
 
 *{
@@ -59,6 +60,42 @@ nav ul li ul.subnav li{
 nav ul li ul.subnav a{
   display:block;
   text-align:left;
+}
+
+#profile{
+  position:absolute;
+  right:0;
+}
+
+#profile #profile-submenu{
+  display:none;
+  background-color:#fff;
+}
+
+ul#profile-submenu li:last-child{
+  border-bottom:none !important;
+}
+
+
+ul#profile-submenu li{
+  display:block !important;
+  min-width:150px;
+  padding:12%;
+  border-bottom:1px solid #42535F;
+
+}
+
+ul#profile-submenu{
+  position:absolute;
+  top: -55%;
+  right: 15%;}
+
+#profile.active #profile-submenu{
+  display:block;
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  -o-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
 }
 /* Home template */
 
@@ -278,11 +315,11 @@ form#place{
   margin:0;
   padding:0;
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  background: url('/images/background-login.jpg') no-repeat center fixed;
+  top:0;
+  min-height:100%;
+  background: url('/images/background-login.jpg') no-repeat center fixed ;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
 }
@@ -324,6 +361,7 @@ form#place{
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
+  -o-transition:0.2s ease all;
 }
 
 /* active state */
@@ -346,6 +384,8 @@ form#place{
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
+  -o-transition:0.2s ease all;
+
 }
 .material-input .bar:before {
   left:50%;
@@ -393,8 +433,9 @@ form#place{
 }
 
 .login-button{
-  background-color:#fff;
-  border:none;
+  background-color:rgba(0,0,0,0);
+  border:2px solid #fff;
+  color:#ffffff !important;
   width:250px;
   height:55px;
   font-size:1rem;
@@ -402,9 +443,17 @@ form#place{
   border-radius:4px;
   margin-left: auto;
   margin-right: auto;
+  margin-top:50px;
   text-align:center;
-  margin-bottom:16%;
+  outline:none;
   cursor:pointer;
+
+}
+
+.login-button.active{
+  background-color:#fff;
+  color:#42535F !important;
+  border:none;
 }
 
 .create-account{
@@ -416,12 +465,44 @@ form#place{
   font-size:1rem;
   display:block;
   border-radius:4px;
-  margin:0 auto;
-  text-align:center
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:50px;
+  text-align:center;
+  outline:none;
+  cursor:pointer;
+}
+
+.create-account.active{
+  background-color:#fff;
+  color:#42535F !important;
+  border:none;
+}
+
+.create-account:focus {outline:0;}
+
+#error-login,
+#error-account{
+  color:#fff;
+  opacity:0;
+  transition:0.4s ease all;
+  -moz-transition:0.4s ease all;
+  -webkit-transition:0.4s ease all;
+  -o-transition:0.4s ease all;
+  text-align:center;
+  cursor:pointer;
+  margin-top:2%;
+}
+
+#error-login.active,
+#error-account.active{
+  opacity:1
 }
 
 h1.login-title{
   text-align:center;
+  font-size:3.75rem;
+  font-weight:normal;
   color:#fff;
   -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent) , to(rgba(250, 250, 250, 0.3)));
 }

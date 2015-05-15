@@ -1,7 +1,7 @@
 <template name="login">
 
 	<div class="login-background">
-		<h1 class="login-title">Easy Travel</h1>
+		<h1 class="login-title"><b>Easy</b> Travel</h1>
 
 		<form id="login-form" autocomplete="off">
 
@@ -23,12 +23,14 @@
 				<label>Password</label>
 			</div>
 
-
-		  <input class="login-button" type="submit" value="Login">
-
+			<!-- <div class="" -->
+		  <input class="login-button active" type="submit" value="Login">
+			<div id="error-login">Sorry, user not found, retry or create an account </div>
 		</form>
 
 		<button class="create-account">Create an account</button>
+		<div id="error-account">the password must be at least 6 characters long</div>
+
 
 	</div>
 
