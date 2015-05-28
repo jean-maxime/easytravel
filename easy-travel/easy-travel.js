@@ -1,7 +1,6 @@
 AddTravel = new Mongo.Collection("add_travel");
 User = new Mongo.Collection("user");
 
-
 Router.route('myTravel', {
     path: '/mytravel/:_id',
     data: function(){
@@ -24,7 +23,7 @@ if (Meteor.isClient) {
     },
 
     travels: function(){
-      return AddTravel.find({place: { $gt: "0" }}, {sort: {departure_date: 1}});
+      return AddTravel.find({}, {sort: {departure_date: 1}});
     }
   });
 
